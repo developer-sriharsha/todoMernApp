@@ -3,7 +3,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Peer from "simple-peer";
 import socketIOClient from "socket.io-client";
 console.log("lksdjflkdfj",socketIOClient)
-const socket = socketIOClient('http://13.127.206.171:8050');
+const socket = socketIOClient('https://ayur-care.ayurway.com:8050');
 const VidCon = ({ children }) => {
 
 
