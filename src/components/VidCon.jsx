@@ -1,9 +1,9 @@
 import React, {useState, useContext, useRef, useEffect} from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Peer from "simple-peer";
-import {io} from "socket.io-client";
-console.log("lksdjflkdfj",io)
-const socket = io.connect('http://13.127.206.171:8050');
+import socketIOClient from "socket.io-client";
+console.log("lksdjflkdfj",socketIOClient)
+const socket = socketIOClient('http://13.127.206.171:8050');
 const VidCon = ({ children }) => {
 
 
