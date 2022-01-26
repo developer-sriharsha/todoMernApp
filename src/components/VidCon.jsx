@@ -60,7 +60,7 @@ const VidCon = ({ children }) => {
         connectionRef.current = peer;
     };
 
-    const callUser = (id) => {
+    const callUser = (e,id) => {
         const peer = new Peer({ initiator: true, trickle: false, stream });
 
         peer.on('signal', (data) => {
@@ -118,7 +118,6 @@ const VidCon = ({ children }) => {
                         </button>
                     </div>
                 )}
-                <form   autoComplete="off">
                     <div  className="col-md-5">
                         <div  >
                             <h6 >Account Info</h6>
@@ -137,13 +136,12 @@ const VidCon = ({ children }) => {
                                     Hang Up
                                 </button>
                             ) : (
-                                <button  className="btn btn-primary" variant="contained" color="primary" onClick={() => callUser(idToCall)} >
+                                <button  className="btn btn-primary" variant="contained" color="primary" onClick={(e) => callUser(e,idToCall)} >
                                     Call
                                 </button>
                             )}
                         </div>
                     </div>
-                </form>
 
                 {children}
             </div>
