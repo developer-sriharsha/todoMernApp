@@ -2,6 +2,7 @@ import React, {useState, useContext, useRef, useEffect} from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Peer from "simple-peer";
 import socketIOClient from "socket.io-client";
+import {Button, notification} from "antd";
 console.log("lksdjflkdfj",socketIOClient)
 const socket = socketIOClient('https://ayur-care.ayurway.com:8050');
 const VidCon = ({ children }) => {
