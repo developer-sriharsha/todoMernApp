@@ -46,9 +46,9 @@ const VidCon = ({ children }) => {
         navigator.mediaDevices.getDisplayMedia({ cursor: true }).then(strseam => {
             const track = strseam.getTracks()[0];
             connectionRef.current.addStream(strseam);
-            userVideo.current.srcObject = strseam;
+            myVideo.current.srcObject = strseam;
             track.onended = function () {
-                userVideo.current.srcObject = userStream;
+                myVideo.current.srcObject = userStream;
                 connectionRef.current.removeTrack(track, strseam);
             };
         })
