@@ -45,10 +45,11 @@ const VidCon = ({ children }) => {
         SetScreenShareStatus(true)
         navigator.mediaDevices.getDisplayMedia({ cursor: true }).then(strseam => {
             const track = strseam.getTracks()[0];
+            connectionRef.current.removeStream(userStream);
             connectionRef.current.addStream(strseam);
-            myVideo.current.srcObject = strseam;
+            userVideo.current.srcObject = userStream;
             track.onended = function () {
-                myVideo.current.srcObject = userStream;
+                userVideo.current.srcObject = userStream;
                 connectionRef.current.removeTrack(track, strseam);
             };
         })
