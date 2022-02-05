@@ -9,6 +9,9 @@ const socket = socketIOClient('https://in-ayur-care.ayurway.com:8050');
 const VidCon = () => {
     const [idToCall, setIdToCall] = useState('');
     const connectionRef = useRef();
+
+    const screenTrackRef = useRef();
+
     const [callAccepted, setCallAccepted] = useState(false);
     const [callEnded, setCallEnded] = useState(false);
     const [stream, setStream] = useState();
@@ -377,41 +380,41 @@ const VidCon = () => {
                                             <div className="flex mt-20">
                                                 <div className="col-md-1 p-0 mt-5"><p>Timings:</p></div>
                                                 <div className="col-md-6 ">
-                                                    {/*<div className="flex">*/}
+                                                    <div className="flex">
 
 
-                                                    {/*    <div className="">*/}
-                                                    {/*        <TimePicker*/}
-                                                    {/*            clearIcon={() => null}*/}
-                                                    {/*            showSecond={false}*/}
-                                                    {/*            onChange={(data) =>*/}
-                                                    {/*                handleChangeTime(data, "StartTime")*/}
-                                                    {/*            }*/}
-                                                    {/*            value={state.meetingDetails.StartTime ? moment(*/}
-                                                    {/*                state.meetingDetails.StartTime) : ""}*/}
-                                                    {/*            className="rc-time-picker mr-15"*/}
-                                                    {/*            popupClassName="rc-time-picker-panel-inner"*/}
-                                                    {/*            format={"h:mm a"}*/}
-                                                    {/*            use12Hours*/}
-                                                    {/*        />*/}
-                                                    {/*    </div>*/}
-                                                    {/*    <p className="mr-10"> To</p>*/}
-                                                    {/*    <div className="">*/}
-                                                    {/*        <TimePicker*/}
-                                                    {/*            clearIcon={() => null}*/}
-                                                    {/*            showSecond={false}*/}
-                                                    {/*            onChange={(data) =>*/}
-                                                    {/*                handleChangeTime(data, "EndTime")*/}
-                                                    {/*            }*/}
-                                                    {/*            value={state.meetingDetails.EndTime ? moment(*/}
-                                                    {/*                state.meetingDetails.EndTime) : ""}*/}
-                                                    {/*            className="rc-time-picker mr-15"*/}
-                                                    {/*            popupClassName="rc-time-picker-panel-inner"*/}
-                                                    {/*            format={"h:mm a"}*/}
-                                                    {/*            use12Hours*/}
-                                                    {/*        />*/}
-                                                    {/*    </div>*/}
-                                                    {/*</div>*/}
+                                                        {/*<div className="">*/}
+                                                        {/*    <TimePicker*/}
+                                                        {/*        clearIcon={() => null}*/}
+                                                        {/*        showSecond={false}*/}
+                                                        {/*        onChange={(data) =>*/}
+                                                        {/*            handleChangeTime(data, "StartTime")*/}
+                                                        {/*        }*/}
+                                                        {/*        value={state.meetingDetails.StartTime ? moment(*/}
+                                                        {/*            state.meetingDetails.StartTime) : ""}*/}
+                                                        {/*        className="rc-time-picker mr-15"*/}
+                                                        {/*        popupClassName="rc-time-picker-panel-inner"*/}
+                                                        {/*        format={"h:mm a"}*/}
+                                                        {/*        use12Hours*/}
+                                                        {/*    />*/}
+                                                        {/*</div>*/}
+                                                        {/*<p className="mr-10"> To</p>*/}
+                                                        {/*<div className="">*/}
+                                                        {/*    <TimePicker*/}
+                                                        {/*        clearIcon={() => null}*/}
+                                                        {/*        showSecond={false}*/}
+                                                        {/*        onChange={(data) =>*/}
+                                                        {/*            handleChangeTime(data, "EndTime")*/}
+                                                        {/*        }*/}
+                                                        {/*        value={state.meetingDetails.EndTime ? moment(*/}
+                                                        {/*            state.meetingDetails.EndTime) : ""}*/}
+                                                        {/*        className="rc-time-picker mr-15"*/}
+                                                        {/*        popupClassName="rc-time-picker-panel-inner"*/}
+                                                        {/*        format={"h:mm a"}*/}
+                                                        {/*        use12Hours*/}
+                                                        {/*    />*/}
+                                                        {/*</div>*/}
+                                                    </div>
 
                                                 </div>
                                                 <div className="col-md-2">     {callAccepted && !callEnded ? (
