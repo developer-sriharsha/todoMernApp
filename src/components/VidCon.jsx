@@ -5,7 +5,7 @@ import socketIOClient from "socket.io-client";
 import {Button, notification} from "antd";
 // import TimePicker from "rc-time-picker";
 // import moment from "moment";
-const socket = socketIOClient('https://in-ayur-care.ayurway.com:8050');
+const socket = socketIOClient('https://ayur-care.ayurway.com:8050');
 const VidCon = () => {
     const [idToCall, setIdToCall] = useState('');
     const connectionRef = useRef();
